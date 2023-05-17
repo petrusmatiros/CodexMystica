@@ -1,24 +1,23 @@
 <template>
-  <HomeView />
+    <div>
+        <p>hi</p>
+    </div>
+
 </template>
 
 <script lang="ts">
 import { defineComponent, onMounted, onUnmounted } from "vue";
-import HomeView from "../views/HomeView.vue";
 
 export default defineComponent({
-  name: "HomePresenter",
-  components: {
-    HomeView,
-  },
+  name: "HomeView",
   props: {},
   setup() {
     onMounted(() => {
-      console.log("HomePresenter mounted");
+      console.log("HomeView mounted");
     });
 
     onUnmounted(() => {
-      console.log("HomePresenter unmounted");
+      console.log("HomeView unmounted");
     });
 
     return {};

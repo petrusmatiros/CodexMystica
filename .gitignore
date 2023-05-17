@@ -12,6 +12,23 @@ dist
 dist-ssr
 *.local
 
+# env
+.env
+
+# Firebase
+/src/firebaseConfig.ts
+src/firebaseConfig.ts
+.idea
+**/node_modules/*
+**/.firebase
+**/.firebaserc
+**/.runtimeconfig.json
+*/npm-debug.log
+lerna-debug.log
+*~
+service-account-credentials.json
+**/package-lock.json
+
 # VSCODE
 .vscode
 
