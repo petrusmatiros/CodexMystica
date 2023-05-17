@@ -1,29 +1,24 @@
 <template>
-    <div>
-        <RouterLink to="/search"></RouterLink>
-        <p>hi</p>
-    </div>
-
+  <SearchView />
 </template>
 
 <script lang="ts">
-import "./style.css";
-import { RouterLink } from "vue-router";
 import { defineComponent, onMounted, onUnmounted } from "vue";
+import SearchView from "../views/SearchView.vue";
 
 export default defineComponent({
-  name: "HomeView",
+  name: "SearchPresenter",
   components: {
-    RouterLink,
+    SearchView,
   },
   props: {},
   setup() {
     onMounted(() => {
-      console.log("HomeView mounted");
+      console.log("SearchPresenter mounted");
     });
 
     onUnmounted(() => {
-      console.log("HomeView unmounted");
+      console.log("SearchPresenter unmounted");
     });
 
     return {};

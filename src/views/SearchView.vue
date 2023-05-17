@@ -1,7 +1,7 @@
 <template>
     <div>
-        <RouterLink to="/search"></RouterLink>
-        <p>hi</p>
+        <RouterLink to="/"/>
+        <p>search</p>
     </div>
 
 </template>
@@ -12,18 +12,18 @@ import { RouterLink } from "vue-router";
 import { defineComponent, onMounted, onUnmounted } from "vue";
 
 export default defineComponent({
-  name: "HomeView",
+  name: "SearchView",
   components: {
     RouterLink,
   },
   props: {},
   setup() {
     onMounted(() => {
-      console.log("HomeView mounted");
+      console.log("SearchView mounted");
     });
 
     onUnmounted(() => {
-      console.log("HomeView unmounted");
+      console.log("SearchView unmounted");
     });
 
     return {};
