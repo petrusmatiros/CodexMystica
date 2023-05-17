@@ -1,7 +1,3 @@
-# Vue 3 + Vite
+# CodexMystica
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+A mystical gateway to the world of Dungeons & Dragons. A comprehensive repository of arcane knowledge, powered by the DnD 5e API. Explore legendary creatures, unravel enchantments, and delve into the depths of magical lore. Unleash your imagination and embark on epic adventures armed with the knowledge found within this enchanted repository
