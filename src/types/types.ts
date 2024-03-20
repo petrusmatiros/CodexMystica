@@ -1,71 +1,72 @@
-export interface Model {}
+export type Spell = {
+    slug: string;
+    name: string;
+    desc: string;
+    higher_level: string;
+    page: string;
+    range: string;
+    target_range_sort: number;
+    components: string;
+    requires_verbal_components: boolean;
+    requires_somatic_components: boolean;
+    requires_material_components: boolean;
+    material: string;
+    can_be_cast_as_ritual: boolean;
+    ritual: string;
+    duration: string;
+    concentration: string;
+    requires_concentration: boolean;
+    casting_time: string;
+    level: string;
+    level_int: number;
+    spell_level: number;
+    school: string;
+    dnd_class: string;
+    spell_lists: string[];
+    archetype: string;
+    circles: string;
+    document__slug: string;
+    document__title: string;
+    document__license_url: string;
+    document__url: string;
+  }
 
-export type APIReference = {
-  index: string;
-  name: string;
-  url: string;
-};
+export enum SpellLevel {
+  CANTRIP = "Cantrip",
+  FIRST_LEVEL = "1st-level",
+  SECOND_LEVEL = "2nd-level",
+  THIRD_LEVEL = "3rd-level",
+  FOURTH_LEVEL = "4th-level",
+  FIFTH_LEVEL = "5th-level",
+  SIXTH_LEVEL = "6th-level",
+  SEVENTH_LEVEL = "7th-level",
+  EIGHTH_LEVEL = "8th-level",
+  NINTH_LEVEL = "9th-level",
+}
 
-export type DC = {
-  dc_type: APIReference;
-  dc_value: number;
-  success_type: "none" | "half" | "other";
-};
+export enum SpellSchool {
+  ABJURATION = "abjuration",
+  CONJURATION = "conjuration",
+  DIVINATION = "divination",
+  ENCHANTMENT = "enchantment",
+  EVOCATION = "evocation",
+  ILLUSION = "illusion",
+  NECROMANCY = "necromancy",
+  TRANSMUTATION = "transmutation",
+}
 
-export type Damage = {
-  damage_type: APIReference;
-  damage_dice: string;
-};
-
-export type Choice = {
-  desc: string;
-  choose: number;
-  type: string;
-  from: OptionSet;
-};
-
-export type OptionSet = {
-  option_set_type: "options_array" | "equipment_category" | "resource_list";
-  options?: Option[];
-  equipment_category?: APIReference;
-  resource_list_url?: string;
-};
-
-export type Option = {
-  option_type:
-    | "reference"
-    | "item"
-    | "action"
-    | "multiple"
-    | "choice"
-    | "string"
-    | "ideal"
-    | "counted_reference"
-    | "score_prerequisite"
-    | "ability_bonus"
-    | "breath"
-    | "damage";
-  reference?: APIReference;
-  item?: APIReference;
-  action_name?: string;
-  count?: number | string;
-  type?: "melee" | "ranged" | "ability" | "magic";
-  items?: Option[];
-  choice?: Choice;
-  string?: string;
-  desc?: string;
-  alignments?: APIReference[];
-  counted_reference?: {
-    count: number;
-    of: APIReference;
-  };
-  ability_score?: APIReference;
-  minimum_score?: number;
-  bonus?: number;
-  name?: string;
-  dc?: DC;
-  damage?: Damage[];
-  damage_type?: APIReference;
-  damage_dice?: string;
-  notes?: string;
-};
+export enum DamageType {
+  FIRE = "fire",
+  FORCE = "force",
+  ACID = "acid",
+  LIGHTNING = "lightning",
+  THUNDER = "thunder",
+  POISON = "poison",
+  COLD = "cold",
+  PSYCHIC = "psychic",
+  NECROTIC = "necrotic",
+  RADIANT = "radiant",
+  SLASHING = "slashing",
+  PIERCING = "piercing",
+  BLUDGEONING = "bludgeoning",
+}
